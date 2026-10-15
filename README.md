@@ -1,43 +1,26 @@
-# Excel to TXT - Python Edition
+# Excel to TXT - Python Edition v0.03b
 
-Un'applicazione Python leggera ed efficiente progettata per convertire fogli di calcolo Excel (`.xlsx` e `.xls`) in file di testo piano (`.txt`). Questo strumento è ideale per l'esportazione di dati, la preparazione di log o la formattazione di dataset per elaborazioni successive.
+Conversione del primo foglio Excel in TXT, con selezione dinamica delle colonne e join opzionale con un documento secondario.
 
----
+## Funzioni principali
+- file `.xlsx` e `.xls`;
+- trascinamento oppure selezione tramite finestra;
+- colonne principali configurabili;
+- join su chiavi accoppiate;
+- fallback opzionale senza l'ultima chiave, solo se univoco;
+- warning per duplicati, fallback e ambiguita;
+- elaborazione in background per non bloccare l'interfaccia;
+- output UTF-8 accanto al documento principale.
 
-## 🚀 Funzionalità
+## Avvio
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
-- **Supporto Multi-Formato:** Compatibile sia con il formato moderno Excel (`.xlsx`) sia con quello legacy (`.xls`).
-- **Efficienza:** Ottimizzato per gestire file di grandi dimensioni riducendo al minimo l'uso della memoria.
+Autore: Daniele Campione  
+Licenza: GNU General Public License
 
----
-
-## 🛠️ Prerequisiti
-
-Prima di iniziare, assicurati di avere installato sul tuo sistema:
-
-- **Python** Versione 3 o superiore.
-
----
-
-## 📦 Dipendenze
-
-Il progetto utilizza le librerie **tkinterdnd2**, **openpyxl** e **pandas**.
-
----
-
-## 🤝 Contributi
-
-I contributi sono sempre benvenuti!
-
----
-
-## 📄 Licenza
-
-Questo progetto è distribuito sotto la licenza GNU GENERAL PUBLIC LICENSE. Consulta il file `LICENSE` per ulteriori dettagli.
-
----
-
-## 👤 Autore
-
-**Daniele Campione**
-- GitHub: [@danielecampione](https://github.com/danielecampione)
+## Correzione v0.03b
+- area chiavi del documento secondario resa esplicita, separata e a larghezza intera;
+- etichette numerate e finestra iniziale piu alta.
